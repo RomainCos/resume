@@ -1,4 +1,111 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.text-center {
+    text-align: center;
+    margin:auto;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visible {
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
 body{
 
-    background-color:aquamarine;
+    background-color:#16BAC5;
+}
+
+header,section{padding:20px}
+#tools{
+background-color:white;
+
+}
+img{
+    width:100%;
+    
+}
+/* //em = 16 px
+50px = 50/16 em */
+.nom{
+    font-size:3.125em;
+    /* padding:5px; */
+    /* margin-bottom:4em; */
+
+}
+.job{
+    font-size:1.25em;
+}
+.nom,.job{
+    font-family: Tahoma, sans-serif;
+    /* color:#171D1C; */
+    color:#090B0B;
+    text-align:center;
+}
+.box{
+    margin:auto;
+}
+.box td{
+    height:100px;
+    width:100px;
+    padding:5px
+}
+
+#tools img {
+	max-height: 100px;
+}
+
+#tools table tbody {
+    justify-content: space-around;
+}
+
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.margin-auto {
+    margin: auto;
 }
