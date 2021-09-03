@@ -58,10 +58,8 @@ body{
 }
 
 header,section{padding:20px}
-#tools{
-background-color:white;
 
-}
+
 img{
     width:100%;
     
@@ -134,11 +132,21 @@ img{
     padding:5px
 }
 
-#tools img {
+#tools{
+    background-color:white;
+    
+    }
+
+    #works{
+        display:none;
+        background-color:transparent;
+        
+        }
+#tools img,#works img {
 	max-height: 100px;
 }
 
-#tools table tbody {
+#tools table tbody,#works table tbody  {
     justify-content: space-around;
 }
 #form_container{

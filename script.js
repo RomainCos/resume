@@ -38,6 +38,17 @@ var skills =
     },
 ]
 
+var works =[
+    {
+        name:"ACCMO",
+        image:'git.png'
+    },
+    {
+        name : "GK",
+        image:'git.png'
+    }
+]
+
 skills.forEach(s => {
     // CREATION OF SKILL CONTAINER HTML ELEMENT
     var skillContainer = document.createElement('tr');
@@ -57,4 +68,24 @@ skills.forEach(s => {
 
     // APPENDING THAT ELEMENT ON THE TABLE
     document.getElementById('tools-body').appendChild(skillContainer);
+});
+works.forEach(s => {
+    // CREATION OF SKILL CONTAINER HTML ELEMENT
+    var worksContainer = document.createElement('tr');
+    worksContainer.classList.add('text-center', 'flex-column');
+    // var name = document.createElement('td');
+    // name.innerText = s.name;
+    var tdImage = document.createElement('td');
+    var image = document.createElement('img');
+    image.src = 'img/'+s.image;
+    image.classList.add('responsive-img');
+    tdImage.appendChild(image);
+    // var level = document.createElement('td');
+    // level.classList.add('b-0', 'level', 'l-'+s.level);
+    // skillContainer.appendChild(name);
+    worksContainer.appendChild(tdImage);
+    // skillContainer.appendChild(level);
+
+    // APPENDING THAT ELEMENT ON THE TABLE
+    document.getElementById('works-body').appendChild(worksContainer);
 });
