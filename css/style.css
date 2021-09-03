@@ -37,9 +37,23 @@
 .inline-block {
     display: inline-block;
 }
-
+.block {
+    display: block;
+}
+.w100{
+    width:100%;
+}
+.w80{
+    width:80%;
+}
+.p10{
+    padding:10px;
+}
+.mb10{
+    margin-bottom:10px;
+}
 body{
-
+    font-family: Tahoma, sans-serif;
     background-color:#16BAC5;
 }
 
@@ -52,40 +66,6 @@ img{
     width:100%;
     
 }
-/* //em = 16 px
-50px = 50/16 em */
-.nom{
-    font-size:3.125em;
-    /* padding:5px; */
-    /* margin-bottom:4em; */
-
-}
-.job{
-    font-size:1.25em;
-}
-.nom,.job{
-    font-family: Tahoma, sans-serif;
-    /* color:#171D1C; */
-    color:#090B0B;
-    text-align:center;
-}
-.box{
-    margin:auto;
-}
-.box td{
-    height:100px;
-    width:100px;
-    padding:5px
-}
-
-#tools img {
-	max-height: 100px;
-}
-
-#tools table tbody {
-    justify-content: space-around;
-}
-
 
 .flex-column {
     display: flex;
@@ -108,4 +88,84 @@ img{
 
 .margin-auto {
     margin: auto;
+}
+
+/* //em = 16 px
+50px = 50/16 em */
+.nom{
+    font-size:3.125em;
+    font-weight:600;
+    text-shadow: #090B0B 1px 1px ;
+    /* padding:5px; */
+    /* margin-bottom:4em; */
+
+}
+.job{
+    background-color:#ed6728;
+    padding:10px;
+    margin:auto;
+    width:50%;
+    font-size:1.25em;
+    font-weight: 200;
+}
+.nom,.job{
+    
+    /* font-family: Tahoma, sans-serif; */
+    color:white;
+   
+    /* color:#171D1C; */
+    /* color:#290400; */
+    /* color:#090B0B; */
+    text-align:center;
+}
+.success{
+    color:darkgreen
+}
+.error{
+    color:crimson;
+}
+.box{
+    margin:auto;
+}
+.box td{
+    height:100px;
+    width:100px;
+    padding:5px
+}
+
+#tools img {
+	max-height: 100px;
+}
+
+#tools table tbody {
+    justify-content: space-around;
+}
+#form_container{
+    width:50%;
+    margin:auto;
+    padding:10px;
+    padding-left:10px;
+    background-color:white;
+    box-shadow: black 1px 1px;
+}
+.contact{
+    font-size:1.5em;
+    font-weight: bold;
+    color: #2e2e2c;
+}
+
+input,textarea{
+    padding:10px;
+    width:95%;
+    /* padding-left:10px; */
+    border:1px solid gray;
+}
+button{
+    font-size:1.25em;
+    color:white;
+    background-color:#ed6728;
+    border:none;
+}
+button:hover{
+    background-color:#e24f24;
 }

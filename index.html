@@ -14,7 +14,7 @@
     </head>
     <body>
         <header><div class="nom">Romain COSTEDOAT</div>
-            <div class="job">Développeur FrontEnd / BackEnd</div></header>
+            <div class="job">Développeur Web à Nantes<br> Front-End / Back-End</div></header>
         <section id="tools">
             <!-- <div class="tools_title">Boite à outils</div>
             <div class="tools-contents" id="tools"> -->
@@ -33,13 +33,75 @@
             </div>
         </section>
         <section id="contact">
-            Nantes<br>
-            
+           
+            <!-- AJAX FORM -->
+            <form id="my-form" action="https://formspree.io/f/myyllpjw" method="POST">
+            <div id="form_container" class="flex-column p10">
+                 
+                <div class="w80 margin-auto justify-center">
+                    <p class="contact" >Contact</p>
+                    <div class="mb10 ">
+                        <label class="block">Nom:</label>
+                      <input type="text" name="nom" class="  "/>
+                    </div>
+                    <div class="mb10">
+                        <label class="block">Email:</label>
+                      <input type="email" name="email" class=" "/>
+                    </div>
+                    <div class="mb10">
+                        <label class="block">Message:</label>
+                        <textarea name="message" class=" "></textarea>
+                    </div>
+                    <div class="mb10">
+                        <button id="my-form-button" class="w100 p10">Envoyer</button>
+                    </div>
+                <p id="my-form-status"></p>
+                </div>
+              
+                
+                
+            </div>
+             
+                
+               
+                
+              </form>
+
         </section>
       
       
         
         <!-- <script src="" async defer></script> -->
          <script type='text/javascript' src="script.js"></script>
+
+        
+          <!-- Place this script at the end of the body tag -->
+          <script>
+              var form = document.getElementById("my-form");
+            //   console.log(form);
+              async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("my-form-status");
+                status.className="";
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                  method: form.method,
+                  body: data,
+                  headers: {
+                      'Accept': 'application/json'
+                  }
+                }).then(response => {
+                  status.innerHTML = "Merci pour votre message !";
+                  status.classList.add('success')
+                  form.reset()
+                }).catch(error => {
+                //   status.innerHTML = "Oops! There was a problem submitting your form"
+                  status.innerHTML = "Euhh... Une erreur est survenue lors de l'envoi..."
+                  status.classList.add('error')
+                });
+              }
+              form.addEventListener("submit", handleSubmit)
+          </script>
+
     </body>
 </html>
